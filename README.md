@@ -103,7 +103,7 @@ License
 
 This project is licensed under the MUJAHID ABDI License. Feel free to use, modify, and distribute the code for your own purposes.
 
-AURTHOR:
+AUTHOR:
 ---------------
 
 MUJAHID ABDI ADAN
