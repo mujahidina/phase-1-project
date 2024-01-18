@@ -50,59 +50,84 @@ document.addEventListener('DOMContentLoaded', () => {
         submitRecipe(recipeName, description, imageUrl);
     });
 
+
     function submitRecipe(recipeName, description, imageUrl) {
-        fetch("http://localhost:3000/recipes", {
+      fetch("http://localhost:3000/recipes", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
+              "Content-Type": "application/json",
+              Accept: "application/json",
           },
           body: JSON.stringify({
-            Recipe: recipeName,
-            Description: description,
-            Image: imageUrl,
+              Recipe: recipeName,
+              Description: description,
+              Image: imageUrl,
           }),
-        })
-          .then((res) => res.json())
-          .then((newRecipe) => {
-            let cardBody = document.createElement("div");
-            cardBody.className = "card-body recipe-card";
-      
-            let h4 = document.createElement("h4");
-            h4.innerHTML = newRecipe.Recipe;
-            cardBody.appendChild(h4);
-      
-            let p = document.createElement("p");
-            p.innerHTML = newRecipe.Description;
-            cardBody.appendChild(p);
-      
-            let thumb = document.createElement("img");
-            thumb.src = newRecipe.Image;
-            cardBody.appendChild(thumb);
-      
-            let editButton = document.createElement("button");
-            editButton.innerHTML = "LIKE";
-            cardBody.appendChild(editButton);
-      
-            let deleteButton = document.createElement("button");
-            deleteButton.innerHTML = "DELETE";
-            cardBody.appendChild(deleteButton);
+      })
+      .then((res) => res.json())
+      .then((newRecipe) => {
+          let cardBody = document.createElement("div");
+          cardBody.className = "card-body recipe-card";
+  
+          let h4 = document.createElement("h4");
+          h4.innerHTML = newRecipe.Recipe;
+          cardBody.appendChild(h4);
+  
+          let p = document.createElement("p");
+          p.innerHTML = newRecipe.Description;
+          cardBody.appendChild(p);
+  
+          let thumb = document.createElement("img");
+          thumb.src = newRecipe.Image;
+          cardBody.appendChild(thumb);
 
-            let likeCount = document.createElement("h5")
-            
-      
-            const recipeContainer = document.getElementById("recipeContainer");
-            recipeContainer.appendChild(cardBody);
-          })
-          .catch((error) => {
-            console.error("There was an error while fetching the data", error);
+          let likesLabel = document.createElement("h3");
+          likesLabel.innerHTML = "LIKES:";
+          cardBody.appendChild(likesLabel);
+          
+          let likesCount = document.createElement("h5");
+          likesCount.textContent = 0;
+          cardBody.appendChild(likesCount);
+  
+          let editButton = document.createElement("button");
+          editButton.innerHTML = "LIKE";
+          cardBody.appendChild(editButton);
+  
+          let deleteButton = document.createElement("button");
+          deleteButton.innerHTML = "DELETE";
+          cardBody.appendChild(deleteButton);
+  
+
+          editButton.addEventListener('click', () => {
+              likesCount.textContent = parseInt(likesCount.textContent) + 1;
+
+              const recipeId = newRecipe.id; 
+              fetch(`http://localhost:3000/recipes/${recipeId}`, {
+                  method: "PATCH",
+                  headers: {
+                      "Content-Type": "application/json",
+                      Accept: "application/json",
+                  },
+                  body: JSON.stringify({
+                      likeCount: parseInt(likesCount.textContent),
+                  }),
+              })
+              .then((res) => res.json())
+              .then((updatedRecipe) => {
+                  console.log(updatedRecipe);
+              })
           });
-
-        getRecipe();
-      }
-
-
-
+  
+          const recipeContainer = document.getElementById("recipeContainer");
+          recipeContainer.appendChild(cardBody);
+      })
+      .catch((error) => {
+          console.error("There was an error while fetching the data", error);
+      });
+  
+      getRecipe();
+  }
+  
     //   GET REQUEST ========================================================================================================================
 
     function getRecipe() {

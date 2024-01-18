@@ -2,9 +2,17 @@
   "recipes": [
     {
       "Recipe": "Ugali",
+      "Description": "its not for everyone, ka huwezi sweat haga, wachana nayo.",
+      "Image": "https://www.gstatic.com/webp/gallery/1.jpg",
+      "id": 2,
+      "likeCount": 4
+    },
+    {
+      "Recipe": "mjj",
       "Description": " Paragraph | Definition, Types & Examples - Video & Lesson ... A good example of a paragraph contains a topic sentence, details and a conclusion. 'There are many different kinds of animals that live in China. Tigers and leopards are animals that live in China's forests in the north. In the jungles, monkeys swing in the trees and elephants walk through the brush.",
       "Image": "https://www.gstatic.com/webp/gallery/1.jpg",
-      "id": 1
+      "id": 3,
+      "likeCount": 39
     }
   ]
 }
