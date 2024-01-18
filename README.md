@@ -23,6 +23,8 @@ Welcome Section:
 
 A visually appealing welcome page with two sections - WelcomeLeft and WelcomeRight, separated by a stylish middleLine.
 The WelcomeRight section displays images of small and big plates with rounded borders.
+
+
 Search Page:
 
 An interactive search page that allows users to search for recipes.
@@ -100,7 +102,12 @@ License
 
 
 This project is licensed under the MUJAHID ABDI License. Feel free to use, modify, and distribute the code for your own purposes.
-                                   -------------
+
+AURTHOR:
+---------------
+
+MUJAHID ABDI ADAN
+                
 
 
 

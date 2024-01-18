@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    
+
 
     // ADD YOUR OWN RECIPES PAGE ===========================================================================================================
 //    POST REQUEST ===============================================
@@ -167,6 +167,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
           })
           .catch((error) => console.error("There was an error while fetching the data", error));
-      }
-                 
+      }              
 });
