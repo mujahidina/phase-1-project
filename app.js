@@ -36,6 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
+
+
+
+    
+
     // ADD YOUR OWN RECIPES PAGE ===========================================================================================================
 //    POST REQUEST ===============================================
  
@@ -93,15 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
           editButton.innerHTML = "LIKE";
           cardBody.appendChild(editButton);
   
-          let deleteButton = document.createElement("button");
-          deleteButton.innerHTML = "DELETE";
-          cardBody.appendChild(deleteButton);
-  
-
           editButton.addEventListener('click', () => {
               likesCount.textContent = parseInt(likesCount.textContent) + 1;
 
-              const recipeId = newRecipe.id; 
+              let recipeId = newRecipe.id; 
               fetch(`http://localhost:3000/recipes/${recipeId}`, {
                   method: "PATCH",
                   headers: {
@@ -127,6 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
       getRecipe();
   }
+
+
+
+  
   
     //   GET REQUEST ========================================================================================================================
 
@@ -158,17 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
               let editButton = document.createElement("button");
               editButton.innerHTML = "LIKE";
               cardBody.appendChild(editButton);
-      
-              let deleteButton = document.createElement("button");
-              deleteButton.innerHTML = "DELETE";
-              cardBody.appendChild(deleteButton);
+            
               recipeContainer.appendChild(cardBody);
             });
           })
           .catch((error) => console.error("There was an error while fetching the data", error));
       }
-
-
-
-    
+                 
 });
