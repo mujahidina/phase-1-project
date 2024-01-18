@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecipeHUB</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <body class="custom-body">
+
+<nav class="navbar navbar-expand-lg">
+  <img id="logo" src="./images/logo.png" alt="">
+  
+  <p id="recipeHub">Recipe<span>HUB</span></p>
+
+  <div id="h3">
+    <h3 id="discover">DISCOVER</h3>
+    <h3 id="addYours">ADD YOURS</h3>
+    <h3 id="aboutUs">ABOUT US</h3>
+  </div>
+</nav>
+
+
+<!-- The landing page -->
+<div class="welcome">
+  <div class="welcomeRight">
+    <img id="bigPlate"  src="./images/bigPlate.jpeg" alt="">
+  </div>
+
+  <div class="middleLine">
+
+  </div>
+
+  <div class="welcomeLeft">
+    <h1>DONT KNOW WHAT TO <span>COOK?</span></h1>
+    <p>Whether you're a seasoned chef or a 
+      kitchen novice,  RecipeHUB is here to 
+      inspire your next culinary masterpiece. 
+      Explore a vast collection of mouthwatering 
+      recipes, carefully curated and tested to
+       ensure simplicity without compromising 
+      on flavor. Say goodbye to mealtime 
+      dilemmas, and let RecipeHUB transform 
+      your kitchen experience. </p>
+  
+  </div>  
+</div>
+
+
+
+  <!-- Search for recipes page -->
+  <div class="searchPage" id="discover">
+    <h2>SEARCH FOR <span>RECIPES</span></h2>
+    <input  placeholder="search"  type="text">
+    <button>search</button>
+
+    <div class="image">
+      
+      
+    </div>
+
+  </div>
+
+
+
+<!-- post your recipes here -->
+<div class="postPage">
+  <h1>ADD YOURS</h1>
+
+  <div class="input">
+  <form id="form">
+    <label for="recipeName">RECIPE NAME</label>
+    <input type="text" id="recipeName">
+
+    <label for="description">DESCRIPTION</label>
+    <input type="text" id="description">
+
+    <label for="imageUrl">IMAGE URL</label>
+    <input type="text" id="imageUrl"">
+
+    <button type="submit" >SUBMIT</button>
+  </form>
+  </div>
+
+  <div class="whiteLine">
+    <!-- empty white line -->
+  </div>
+  
+  <div class="container">
+    <div class="row" id="recipeContainer">
+      <!-- Recipe cards will be dynamically added here -->
+    </div>
+  </div>
+
+
+<!-- FOOTER section here -->
+<div class="footer">
+<div class="aboutUs">
+  <h5>ABOUT US</h5>
+  <h3>contact us</h3>
+</div>
+
+<div class="contacts">
+  <h6>CONTACT US</h6>
+  
+    <a href="https://www.instagram.com/_mj.nxtdoor/">Instagram</a>
+    <a href="#">Youtube</a>
+    <a href="#">Tiktok</a>
+    <a href="#">Facebook</a>
+  
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
