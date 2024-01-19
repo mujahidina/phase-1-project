@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then((res) => res.json())
       .then((newRecipe) => {
+        
           let cardBody = document.createElement("div");
           cardBody.className = "card-body recipe-card";
   

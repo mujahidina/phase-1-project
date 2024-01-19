@@ -99,6 +99,11 @@ Create a new branch for your feature or bug fix.
 Make changes and submit a pull request.
 License
 
+LIVE LINK.
+-------------------
+
+https://mujahidina.github.io/phase-1-project-RecipeHub/
+
 
 
 This project is licensed under the MUJAHID ABDI License. Feel free to use, modify, and distribute the code for your own purposes.
